@@ -26,7 +26,16 @@ body .image {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: image;
-  width: 50%;
+  width: 50vw;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+body .image img {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 100%;
 }
 
 body .message {
@@ -59,5 +68,71 @@ body footer {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: credits;
+}
+
+@media (max-width: 600px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: url(/images/bg-mobile.svg);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+  }
+  body .logo {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  body .logo img {
+    height: 50%;
+    width: 50%;
+    margin-bottom: 20%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-bottom: 20%;
+  }
+  body .message {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body .message h1 {
+    margin: 5%;
+  }
+  body .message p {
+    margin: 5%;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  body .message button {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  body footer {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
 }
 /*# sourceMappingURL=main.css.map */
