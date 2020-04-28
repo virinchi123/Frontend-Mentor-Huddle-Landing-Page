@@ -1,0 +1,55 @@
+$purple: hsl(257, 40%, 49%);
+
+$openSans:'Open Sans', sans-serif;
+
+body{
+    display: grid;
+    grid-template-areas: 
+        "logobar logobar"
+        "image text"
+        "credits credits";
+    grid-template-columns: 1fr 1fr;
+    background-color: $purple;
+    font-family: $openSans;
+    font-weight: 400;
+    background-image: url(/images/bg-desktop.svg);
+    gap:20px;
+    column-gap: 100px;
+    padding: 40px;
+    padding-top: 20px;
+
+        .logo{
+            grid-area: logobar;
+        }
+
+        .image{
+            grid-area: image;
+            width: 50%;
+        }
+
+        .message{
+            grid-area:text;
+
+            h1{
+                color: white;
+            }
+
+            p{
+                color: white;
+            }
+
+            button{
+                background-color: white;
+                color: $purple;
+                width: 200px;
+                padding: 20px;
+                border-radius: 100px;
+                border: none;
+                box-shadow: 1px 7px 2px darken($purple,10%);
+            }
+        }
+
+        footer{
+            grid-area:credits;
+        }
+}
